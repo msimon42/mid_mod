@@ -14,6 +14,7 @@ RSpec.describe 'potter_service' do
       @members.each do |member|
         expect(member.name).to be_truthy
         expect(member.house).to eq('Gryffindor')
+      end   
     end
   end
 end
