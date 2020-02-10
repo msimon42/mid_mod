@@ -1,7 +1,7 @@
 class PotterService
-  def members_by_house(house)
-    members = get_json("/characters?house=#{house}")
-    members.map{|member| Member.new(member['name'], member['role'], member['house'], member['patronus'])}
+  def search_by_house(house)
+    members = get_json("characters?house=#{house}&orderOfThePhoenix=true", ENV['POTTER_KEY'])
+    members.map{|member| Member.new(member['name'], member['role'], member['house'], member['patronus'], member['_id'])}
   end
 
   private
