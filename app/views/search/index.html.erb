@@ -1,0 +1,13 @@
+<h1>Members</h1>
+<ul id='members'>
+  <% @members.each do |member| %>
+    <div id="member-<%= member.id %>">
+      <h3><%= member.name %></h3>
+        <ul>
+          <li>House: <%= member.house %></li>
+          <li>Role: <%= member.role %></li>
+          <li>Patronus: <%= member.patronus %></li>
+        </ul>
+    </div>
+  <% end %>
+</ul>        
